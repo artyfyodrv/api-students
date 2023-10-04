@@ -14,4 +14,9 @@ class Lection extends Model
     ];
 
     public $timestamps = false;
+
+    public function classrooms()
+    {
+        return $this->belongsToMany(Classroom::class)->withPivot('order')->orderBy('pivot_order');
+    }
 }

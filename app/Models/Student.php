@@ -15,4 +15,9 @@ class Student extends Model
     ];
 
     public $timestamps = false;
+
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class);
+    }
 }
