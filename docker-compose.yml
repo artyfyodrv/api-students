@@ -33,14 +33,14 @@ services:
         image: mariadb:11.1.2
         restart: "no"
         ports:
-            - "${MYSQL_PORT}:3306"
+            - "${DB_PORT}:3306"
         volumes:
             - ./logs/mysql/:/var/logs/mysql
             - db-mysql:/var/lib/mysql
         security_opt:
             - seccomp:unconfined
         environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
             MYSQL_DATABASE: ${DB_DATABASE}
             MYSQL_USER: ${DB_USERNAME}
             MYSQL_PASSWORD: ${DB_PASSWORD}
