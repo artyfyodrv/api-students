@@ -10,13 +10,16 @@ class Lection extends Model
     use HasFactory;
 
     protected $fillable = [
-        'topic'
+        'topic',
+        'description'
     ];
 
     public $timestamps = false;
 
     public function classrooms()
     {
-        return $this->belongsToMany(Classroom::class)->withPivot('order')->orderBy('pivot_order');
+        return $this->belongsToMany(Classroom::class, 'classroom_lection')
+            ->withPivot('order')
+            ->orderBy('classroom_lection.order');
     }
 }

@@ -11,7 +11,8 @@ class Student extends Model
 
     protected $fillable = [
         'name',
-        'email'
+        'email',
+        'classroom_id'
     ];
 
     public $timestamps = false;
