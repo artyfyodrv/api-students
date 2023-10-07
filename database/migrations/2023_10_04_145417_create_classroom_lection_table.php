@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('classroom_id');
             $table->unsignedBigInteger('lection_id');
             $table->integer('order');
+            $table->boolean('is_active');
 
             $table->foreign('classroom_id')->references('id')->on('classrooms')->onDelete('cascade');
             $table->foreign('lection_id')->references('id')->on('lections')->onDelete('cascade');
