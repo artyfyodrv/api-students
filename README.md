@@ -8,3 +8,5 @@
 
 
 ### Демка https://students.artyfyodrv.ru/ ###
+
+### Инструкция по работе с API https://gist.github.com/artyfyodrv/5fe57d1b14a062ab9f54c5812faf52e1 ###
