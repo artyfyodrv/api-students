@@ -47,7 +47,7 @@ class LectionController extends ResponseController
             $data = Lection::with('classrooms.lections')->find($request->id);
         } catch (Throwable $t) {
             Log::error($t->getMessage() . ' ' . __FILE__ . ' ' . __LINE__);
-            return $this->sendError('Ошибка получения данных учебного класса', 400);
+            return $this->sendError('Ошибка получения данных лекции', 400);
         }
 
         return $this->sendResponse($data);

@@ -38,7 +38,7 @@ class ClassroomController extends ResponseController
             $data->save();
         } catch (Throwable $t) {
             Log::error($t->getMessage() . ' ' . __FILE__ . ' ' . __LINE__);
-            return $this->sendError('Ошибка обновления студента', 400);
+            return $this->sendError('Ошибка обновления учебного класса', 400);
         }
 
         return $this->sendResponse($data);
@@ -74,7 +74,7 @@ class ClassroomController extends ResponseController
             $data = ClassroomService::setSchedule($request->classroom_id, $request->lections_id, $request->orders);
         } catch (Throwable $t) {
             Log::error($t->getMessage() . ' ' . __FILE__ . ' ' . __LINE__);
-            return $this->sendError('Ошибка назначения учебного плана', 400);
+            return $this->sendError('Ошибка назначения учебного плана класса', 400);
         }
 
         return $this->sendResponse($data);
